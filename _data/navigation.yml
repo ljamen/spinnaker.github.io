@@ -218,6 +218,8 @@ guides:
             url: /guides/tutorials/codelabs/kubernetes-v2-source-to-prod/
           - title: OpenStack Source To Prod
             url: /guides/tutorials/codelabs/openstack-source-to-prod/
+          - title: Oracle Cloud Infrastructure Source To Prod
+            url: /guides/tutorials/codelabs/oci-source-to-prod/
           - title: Continuous Delivery with Containers on GCP
             url: /guides/tutorials/codelabs/gcp-kubernetes-source-to-prod/
           - title: Continuous Delivery to Kubernetes on Azure
