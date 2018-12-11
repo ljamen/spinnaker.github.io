@@ -9,7 +9,7 @@ sidebar:
 
 In this codelab you will configure a Spinnaker pipeline to deploy an application from Kubernetes manifest files targeting Kubernetes on Oracle Cloud Infrastructure Container Engine (OKE).
 
-# 0: Prerequisites
+# Prerequisites
 
 Before we begin, we need to do the following:
 
@@ -29,24 +29,24 @@ SSH onto the compute instance you previously created.  `IP` is its public ip add
 ssh ubuntu@IP
 ```
 
-Install Halyard.
+#### Install Halyard
 
 ```bash
 curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
 sudo bash InstallHalyard.sh -y
 ```
 
-Set up  Oracle Object Storage as your Spinnaker storage by following these [Adding Oracle Object Storage to Spinnaker](/setup/install/storage/oracle/) steps.
+* Set up Oracle Object Storage as your Spinnaker storage by following these steps: [Adding Oracle Object Storage to Spinnaker](/setup/install/storage/oracle/).
 
-Set up your Kubernetes Cloud provider by following these [Setting up OKE](/setup/install/providers/kubernetes-v2/oke/) steps.
+* Set up your Kubernetes Cloud provider by following these steps: [Setting up OKE](/setup/install/providers/kubernetes-v2/oke/).
 
-Set up Spinnaker version.  To complete this tutorial, Spinnaker version has to be at least 1.11.x.
+* Set up Spinnaker version.  To complete this tutorial, Spinnaker version has to be at least 1.11.x.
 
 ```bash
 hal config version edit --version $SPINNAKER_VERSION
 ```
 
-Finally complete the installation by running this
+* Execute the following commands to complete the installation:
 
 ```bash
 hal config deploy edit --type localdebian 
@@ -83,7 +83,7 @@ In the *New Application* dialog:
 
 # 2: Create a load balancer
 
-Navigate to the "Load Balancers" tab and click the *Create Load Balancer* button, enter the following yaml in the *Manifest*.
+Navigate to the "Load Balancers" tab and click the *Create Load Balancer* button, enter the following yaml in the *Manifest*:
 
 ```yaml
 kind: Service
@@ -158,7 +158,7 @@ spec:
 
 ![](deploy.png)
 
-Save the pipeline.
+* Save the pipeline.
 
 # 4. Deploy
 
